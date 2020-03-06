@@ -1,0 +1,27 @@
+<label>Server status</label>
+<!-- <input
+type = "text"
+class = "form-control"
+(input) = "onupdateserver($event)"> -->
+<input
+type = "text"
+class = "form-control"
+[(ngModel)] = "textinput">
+<!-- <p>{{ textinput }}</p> -->
+<!-- <h5>Serve works!</h5> -->
+<!-- <button class = "btn btn-primary" [disabled] = "!allownewserver" (click) = "onclickdo()">
+  Add Server</button> -->
+<button class = "btn btn-primary" [disabled] = "activateonclick()" (click) = "onclickdo()">
+  Add Server</button>
+<!-- <p>{{ pbin }} </p> -->
+<!-- <p>Server name is {{ textinput }}</p> -->
+<!-- <p>{{ allownewserver }}</p> -->
+<!-- <p [innerText] = "!allownewserver"></p>  This is the property binding as in Data binding -->
+
+<!-- if else use in webpage -->
+<p *ngIf = "serverCreated">Server name is {{ textinput }}</p>
+<ng-template #noServer>
+  <p>No server created!</p>
+</ng-template>
+<div *ngFor = "let dx of exec; let i = index">{{ i }}</div>
+<!-- <script>console.log(exec)</script> -->
